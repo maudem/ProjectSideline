@@ -7,7 +7,6 @@ var mongoose = require("mongoose");
 // Models 
 var Player = require("./models/player.js");
 var Events = require("./models/events.js");
-var Teams = require("./models/teams.js");
 
 // Init & config express 
 var app = express(); 
