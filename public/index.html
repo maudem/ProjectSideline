@@ -3,23 +3,18 @@
 
 <head>
 	<meta charset="UTF-8">
-    <title>Welcome to the Sideline.</title>
-    <!-- Compiled and minified CSS -->
+  <title>Welcome to the Sideline.</title>
+  <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.min.css">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
-
-  <!--jquery  -->
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
   <!-- our style -->
-<link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
-<body>
+<body className="welcome">
 
 	<!-- This is where React will render the contents it generates -->
 	<div id="app"></div>
@@ -27,7 +22,7 @@
 	<!-- All of our JS code will be transpiled into this bundle.js file -->
 	<script src="bundle.js"></script>
    
-<footer class="page-footer">
+  <!-- <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -42,7 +37,27 @@
         © 2017 Copyright CodeNoir
       </div>
     </div>
+  </footer> -->
+  <footer className="page-footer green darken-3">
+    <div className="footer-copyright green darken-4">
+      <div className="container">
+       <p>&copy; Made by Niger Ian & Maude </p>
+
+      </div>
+    </div>
   </footer>
+
+   <!--jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script> 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
+  
+    <!--our own javascript  -->
+    <script src="../app/function.js"></script>   
 
 </body>
 
