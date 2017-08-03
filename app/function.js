@@ -1,4 +1,4 @@
-
+window.$ = document.querySelectorAll.bind(document);
 
 $(document).ready(function(){
   //for modal function
@@ -48,4 +48,3 @@ $('.footer a').click(function(){
   
   
 });
-

@@ -5,9 +5,8 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 
 // Models 
-var Player = require("./models/player.js");
-var Events = require("./models/events.js");
-var Teams = require("./models/teams.js");
+var Player = require("./models/appmodels.js");
+// var Events = require("./models/events.js");
 
 // Init & config express 
 var app = express(); 
@@ -32,7 +31,7 @@ db.once("open",function() {
 // Routes 
  app.get("/", function(req,res) {
             console.log("WELCOME TO THE THUNDERDOME!");
-            res.send("WELCOME TO THE THUNDERDOME!");
+            res.sendFile(path.join(__dirname, "public/LandingPage.html"));
             // Family.find({}, function(error, doc){
             //         if (error){
             //             res.send(error);
@@ -95,9 +94,8 @@ db.once("open",function() {
             //         }); // Find 
          });  // teams get routes   
         
-        // Listen on Port 3000
 
-
+        // Listen on Port 300
 app.listen(3000, function() {
   console.log("App running on port 3000!");
 });

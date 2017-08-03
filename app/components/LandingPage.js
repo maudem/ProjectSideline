@@ -1,31 +1,16 @@
 
-import React from 'react'
-{/*import ReactDom from 'react-dom'*/}
-import {Link} from 'react-router'
+var React = require("react");
+var Link = require('react-router').Link;
 
-var Main = React.createClass({
+var LandingPage = React.createClass({
     render: function() {
         return (
     
-        <div>
-            <header className="navbar-fixed">
-                <nav className="green darken-4">
-                    <div className="col s12">
-                        <ul className="right">
-                            <li className="right">
-                                <a href="" target="_blank" className="fa fa-facebook-square fa-2x waves-effect waves-light"><span className="icon-text"></span></a>
-                            </li>
-                            <li className="right">
-                                <a href="" target="_blank" className="fa fa-github-square fa-2x waves-effect waves-light"><span className="icon-text"></span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <div className="container">
-                {this.props.children}
-            </div>
-            {/*<main className="valign-wrapper">
+<div>
+    <span id="splash-overlay" className="splash"></span>
+    <span id="welcome" className="z-depth-4"></span>
+
+            <main className="valign-wrapper">
                 <span className="container grey-text text-lighten-2 ">
 
                     <p className="flow-text">Welcome to</p>
@@ -34,9 +19,10 @@ var Main = React.createClass({
                     <blockquote className="flow-text">A one stop shop for Coach's team communication and management</blockquote>
 
                     <div className="center-align">
-
+                        {/*Dropdown Trigger*/}
                         <a className="btn dropdown-button modal-trigger" href="#modal1" data-activates="signin">Start Here</a>
 
+                        {/*Modal Structures (maybe use react for this?)*/}
                         <div id='modal1' className="modal">
                             <div className="modal-content">
                                 <div className="toggle">
@@ -48,16 +34,16 @@ var Main = React.createClass({
                                     <h1 className="title">Login</h1>
                                     <form> 
                                         <div className = "input-container has-feedback">
-                                            <input type="text" id="Username" name="Username" required autocomplete="off" pattern="[\w_-]{3,20}" title="Must contain from 3 to 20 characters such as any letter, number, an underscore, or a hyphen."/>
-                                            <label for="Username">Username</label>
+                                            <input type="text" id="Username" name="Username" required autoComplete="off" pattern="[\w_-]{3,20}" title="Must contain from 3 to 20 characters such as any letter, number, an underscore, or a hyphen."/>
+                                            <label htmlFor="Username">Username</label>
                                             <i className="fa fa-user form-control-feedback"></i>
                                             <div className="check"></div>
                                             <div className="bar"></div>
                                         </div>
 
                                         <div className = "input-container has-feedback">
-                                            <input type="password" id="Password" name="Password" required autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Must contain at least one number and one uppercase and lowercase letter, and from 8 to 20 characters."/>
-                                            <label for="Password">Password</label>
+                                            <input type="password" id="Password" name="Password" required autoComplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Must contain at least one number and one uppercase and lowercase letter, and from 8 to 20 characters."/>
+                                            <label htmlFor="Password">Password</label>
                                             <i className="fa fa-lock form-control-feedback"></i>
                                             <div className="check"></div>
                                             <div className="bar"></div>
@@ -76,7 +62,7 @@ var Main = React.createClass({
                                         </div>
 
                                         <div className="footer">
-                                            <Link to="#">Forgot your password?</Link>
+                                            <Link to="http://www.google.com">Forgot your password?</Link>
                                         </div>
                                     </form>
                                 </div>
@@ -85,24 +71,24 @@ var Main = React.createClass({
                                     <h1 className="title">Create an account</h1>
                                     <form> 
                                         <div className = "input-container has-feedback">
-                                            <input type="text" id="Username" name="Username" required autocomplete="off" pattern="[\w_-]{3,20}" title="Username must contain from 3 to 20 characters such as any letter, number, an underscore, or a hyphen."/>
-                                            <label for="Username">Username</label>
+                                            <input type="text" id="Username" name="Username" required autoComplete="off" pattern="[\w_-]{3,20}" title="Username must contain from 3 to 20 characters such as any letter, number, an underscore, or a hyphen."/>
+                                            <label htmlFor="Username">Username</label>
                                             <i className="fa fa-user form-control-feedback"></i>
                                             <div className="check"></div>
                                             <div className="bar"></div>
                                         </div>
 
                                         <div className = "input-container has-feedback">
-                                            <input type="email" id="E-mail" name="E-mail" required pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" title="Not an e-mail!" autocomplete="off"/>
-                                            <label for="E-mail">E-mail</label>
+                                            <input type="email" id="E-mail" name="E-mail" required pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" title="Not an e-mail!" autoComplete="off"/>
+                                            <label htmlFor="E-mail">E-mail</label>
                                             <i className="fa fa-envelope form-control-feedback"></i>
                                             <div className="check"></div>
                                             <div className="bar"></div>
                                         </div>
 
                                         <div className = "input-container has-feedback">
-                                            <input type="password" id="Password" name="Password" required autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Password must contain at least one number and one uppercase and lowercase letter, and from 8 to 20 characters."/>
-                                            <label for="Password">Password</label>
+                                            <input type="password" id="Password" name="Password" required autoComplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Password must contain at least one number and one uppercase and lowercase letter, and from 8 to 20 characters."/>
+                                            <label htmlFor="Password">Password</label>
                                             <i className="fa fa-lock form-control-feedback"></i>
                                             <div className="check"></div>
                                             <div className="bar"></div>
@@ -126,8 +112,8 @@ var Main = React.createClass({
 
                                     <form> 
                                         <div className = "input-container has-feedback">
-                                            <input type="email" id="E-mail" name="E-mail" required  pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" title="Not an e-mail!" autocomplete="off"/>
-                                            <label for="E-mail">E-mail</label>
+                                            <input type="email" id="E-mail" name="E-mail" required  pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" title="Not an e-mail!" autoComplete="off"/>
+                                            <label htmlFor="E-mail">E-mail</label>
                                             <i className="fa fa-envelope form-control-feedback"></i>
                                             <div className="check"></div>
                                             <div className="bar"></div>
@@ -146,19 +132,10 @@ var Main = React.createClass({
                     </div>
                 </span>
             </main>
-            
-            {/*footer*/}
-            <footer className="page-footer green darken-3">
-                <div className="footer-copyright green darken-4">
-                    <div className="container">
-                        <p>&copy; Made by Niger Ian & Maude </p>
-                    </div>
-                </div>
-            </footer>
         </div>
-       );
-    }  
+        );
+    }
 
 });
 
-module.exports = Main;
+module.exports = LandingPage;
